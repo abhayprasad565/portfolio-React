@@ -38,3 +38,27 @@ html.dark {
     --btnBg: var(--dark-btnColor);
     --footerBg: var(--dark-footerBg);
 }
+
+@keyframes bounce-y-reduced {
+
+    0%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-15px);
+        /* Adjust the bounce height */
+    }
+
+    75% {
+        transform: translateY(-15px);
+        /* Adjust the bounce height */
+    }
+}
+
+.animate-bounce-y-reduced {
+    animation: bounce-y-reduced 5s infinite;
+    /* Adjust the animation duration */
+}

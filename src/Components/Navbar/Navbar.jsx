@@ -18,7 +18,7 @@ const Navbar = (props) => {
             <div onClick={menuBtnClick} className='z-10 w-1/2 flex justify-end items-center sm:hidden material-symbols-outlined text-5xl text-custom-textColor'>
                 {!menuActive ? 'menu' : 'close'}
             </div>
-            <nav className={`bg-custom-background sm:w-1/2 sm:flex-row fixed ${menuActive ? 'mx-0' : 'mx-[-100vw]'} my-12 sm:my-0 sm:mx-0 sm:static  flex justify-end items-center flex-col w-full `}>
+            <nav className={`bg-custom-background sm:w-1/2 sm:flex-row fixed ${menuActive ? 'mx-0' : 'mx-[-110vw]'} my-12 sm:my-0 sm:mx-0 sm:static  flex justify-end items-center flex-col w-full `}>
                 <NavLink to="/" className={({ isActive }) => `hover:underline hover:underline-offset-8 transition-all text-2xl  font-light drop-shadow-xl px-4 py-1 hover:text-custom-linkHover ${isActive ? 'text-custom-linkActive' : 'text-custom-textColor'}`}>
                     About
                 </NavLink>
