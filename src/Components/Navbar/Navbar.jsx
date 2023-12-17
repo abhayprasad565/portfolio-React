@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import abhaylogo from '../../assets/abhaylogo.png'
 import abhaylogoDark from '../../assets/abhaylogoDark.png'
 
 const Navbar = (props) => {
     const [menuActive, setMenuActive] = useState(false);
+    const menuRef = useRef(0);
     const menuBtnClick = (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         setMenuActive(!menuActive);
     }
     return (
@@ -15,10 +16,10 @@ const Navbar = (props) => {
             <div onClick={props.toggleDarkMode} className="w-1/2 py-2 flex justify-start items-center">
                 <img src={props.darkMode ? abhaylogoDark : abhaylogo} className=' sm:w-[10rem] w-[7rem]' />
             </div>
-            <div onClick={menuBtnClick} className='z-10 w-1/2 flex justify-end items-center sm:hidden material-symbols-outlined text-5xl text-custom-textColor'>
+            <div onClick={menuBtnClick} ref={menuRef} className='z-10 w-1/2 flex justify-end items-center sm:hidden material-symbols-outlined text-5xl text-custom-textColor'>
                 {!menuActive ? 'menu' : 'close'}
             </div>
-            <nav className={`bg-custom-background sm:w-1/2 sm:flex-row fixed ${menuActive ? 'mx-0' : 'mx-[-110vw]'} my-12 sm:my-0 sm:mx-0 sm:static  flex justify-end items-center flex-col w-full `}>
+            <nav className={`bg-custom-background z-10 sm:w-1/2 transition-all sm:flex-row fixed ${menuActive ? 'mx-0' : 'mx-[-110vw]'} my-12 sm:my-0 sm:mx-0 sm:static  flex justify-end items-center flex-col w-full`}>
                 <NavLink to="/" className={({ isActive }) => `hover:underline hover:underline-offset-8 transition-all text-2xl  font-light drop-shadow-xl px-4 py-1 hover:text-custom-linkHover ${isActive ? 'text-custom-linkActive' : 'text-custom-textColor'}`}>
                     About
                 </NavLink>
