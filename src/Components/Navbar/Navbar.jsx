@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, Link } from "react-router-dom";
 import abhaylogo from '../../assets/abhaylogo.png'
-import abhaylogoDark from '../../assets/abhaylogoDark.png'
+import abhaylogoDark from '../../assets/abhayLogoDark.png'
 import useTheme from '../../Contexts/Theme';
 
 const Navbar = () => {
