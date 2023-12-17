@@ -3,16 +3,16 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
 import './index.css'
 import App from './App'
-import Home from './Components/Home/Home'
-import Projects from './Components/Projects/Projects'
-import Skills from './Components/Skills/Skills'
+import { Home, Projects, Skills, Education, Contact } from './Components/index'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route path='' element={<Home />}></Route>
       <Route path='skills' element={<Skills />}></Route>
+      <Route path='education' element={<Education />}></Route>
       <Route path='projects' element={<Projects />}></Route>
+      <Route path='contact' element={<Contact />}></Route>
     </Route>
   )
 )

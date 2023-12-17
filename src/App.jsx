@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
 import { Outlet } from 'react-router-dom';
+import { ThemeProvider } from './Contexts/Theme';
 import prayImg from "./assets/pray.png";
 import emojiAbhay from "./assets/Abhay-bitmoji.png";
 import './App.css'
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+
   function toggleDarkMode() {
     const htmlElement = document.documentElement;
     if (htmlElement.classList.contains("dark")) {
@@ -23,6 +25,8 @@ function App() {
   useEffect(() => {
     let title = document.querySelector("title");
     var link = document.querySelector("link[rel*='icon']");
+    title.textContent = "Portfolio | Abhay Kumar";
+    link.href = emojiAbhay;
     document.addEventListener('visibilitychange', function (event) {
       if (document.hidden) {
         // Create a new favicon URL
@@ -40,9 +44,11 @@ function App() {
   })
   return (
     <>
-      <Navbar toggleDarkMode={toggleDarkMode} darkMode={darkMode}></Navbar>
-      <Outlet toggleDarkMode={toggleDarkMode} darkMode={darkMode}></Outlet>
-      <Footer toggleDarkMode={toggleDarkMode} darkMode={darkMode}></Footer>
+      <ThemeProvider value={{ darkMode, toggleDarkMode }}>
+        <Navbar></Navbar>
+        <Outlet></Outlet>
+        <Footer></Footer>
+      </ThemeProvider>
     </>
   )
 }

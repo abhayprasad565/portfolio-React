@@ -1,10 +1,12 @@
 import React from 'react';
+import useTheme from '../../Contexts/Theme';
 import { NavLink, Link } from "react-router-dom";
 
 
-const Footer = (props) => {
+const Footer = () => {
+    const { darkMode, toggleDarkMode } = useTheme();
     return (
-        <div className={`w-full ${props.darkMode ? "border-white" : "border-grey-600"} box-border text-custom-textColor  px-2 border-t-2 sm:py-6 sm:h-0 bg-custom-footerBg  static sm:min-h-fit bottom-1 flex flex-row flex-wrap  justify-start sm:justify-evenly`}>
+        <div className={`w-full ${darkMode ? "border-white" : "border-grey-600"} box-border text-custom-textColor  px-2 border-t-2 sm:py-6 sm:h-0 bg-custom-footerBg  static sm:min-h-fit bottom-1 flex flex-row flex-wrap  justify-start sm:justify-evenly`}>
             <div className="sm:w-2/5 w-full  h-1/3 sm:h-full  py-2 sm:px-10 flex flex-col items-center justify-start">
                 <Link to='/' className='w-full   text-3xl text-center px-10'>
                     Abhay's Portfolio</Link>

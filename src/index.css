@@ -58,7 +58,31 @@ html.dark {
     }
 }
 
+@keyframes bounce-x-reduced {
+
+    0%,
+    50%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-15px);
+        /* Adjust the bounce height */
+    }
+
+    75% {
+        transform: translateX(-15px);
+        /* Adjust the bounce height */
+    }
+}
+
 .animate-bounce-y-reduced {
     animation: bounce-y-reduced 5s infinite;
+    /* Adjust the animation duration */
+}
+
+.animate-bounce-x-reduced {
+    animation: bounce-x-reduced 5s infinite;
     /* Adjust the animation duration */
 }
