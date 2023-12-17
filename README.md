@@ -1,8 +1,7 @@
 Portfolio Website - version 1
 Abhay Kumar prasad
 
-🔹 Report Bug     🔹 Request Feature
-TL;DR
+
 You can fork this repo to modify and make changes of your own. Please give me proper credit by linking back to abhayprasad565. Thanks!
 
 Built With
@@ -19,7 +18,7 @@ VsCode
 Features
 📖 Multi-Page Layout
 
-🎨 Styled with React-Bootstrap and Css with easy to customize colors
+🎨 Styled with React-Tailwind and Css with easy to customize colors
 
 📱 Fully Responsive
 
@@ -29,7 +28,7 @@ Clone down this repository. You will need node.js and git installed globally on 
 🛠 Installation and Setup Instructions
 Installation: npm install
 
-In the project directory, you can run: npm start
+In the project directory, you can run: npm run dev
 
 Runs the app in the development mode.
 Open http://localhost:5173 to view it in the browser. The page will reload if you make edits.
