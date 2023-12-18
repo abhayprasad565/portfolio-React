@@ -32,7 +32,7 @@ const Footer = () => {
                     </NavLink>
                     </li>
                     <li><NavLink to="education" className={({ isActive }) => ` transition-all ease delay-100 flex flex-row font-light drop-shadow-xl  hover:text-custom-linkHover ${isActive ? 'text-custom-linkActive' : ' '}`}>
-                        <div className='material-symbols-outlined text-base'>play_circle</div><div>Educatin</div>
+                        <div className='material-symbols-outlined text-base'>play_circle</div><div>Education</div>
                     </NavLink>
                     </li>
                     <li><NavLink to="projects" className={({ isActive }) => ` transition-all ease delay-100  flex flex-row font-light drop-shadow-xl  hover:text-custom-linkHover ${isActive ? 'text-custom-linkActive' : ' '}`}>
