@@ -17,6 +17,20 @@ const Projects = (props) => {
             link: "https://github.com/abhayprasad565/WanderLust-Travel-Website"
         },
         {
+            name: "Aam Pay",
+            img: wanderlust,
+            des: "AamPay is a robust payments wallet web application built using the MERN (MongoDB, Express.js, React, Node.js) stack. It is designed to implement secure and efficient transactions, ensuring a seamless user experience.",
+            lag: "MERN Stack",
+            link: "https://github.com/abhayprasad565/paytmClone01"
+        },
+         {
+            name: "devDiary - mernStack Blogging website",
+            img: reactPort,
+            des: "devDiary - blogging , article sharing website for geeks and every other community , made with ❤️ by Abhay Kumar Prasad ",
+            lag: "MERN STACK",
+            link: "https://github.com/abhayprasad565/devDiary"
+        },
+        {
             name: "React Portfolio website",
             img: reactPort,
             des: "Portfolio using React implementing React router , contextApi and TailwindCSS  with Dark and Light Modes",
